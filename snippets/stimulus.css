@@ -1,0 +1,14 @@
+/* STIMULUS */
+#stimulus {
+    /* Place in stimulus-area of parent grid */
+    grid-area: stimulus-area;
+    
+    /* Display children using FLEX system */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Style text */
+    font: bold 90px sans-serif;
+    color: green;
+}

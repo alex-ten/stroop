@@ -1,0 +1,40 @@
+Add the following code snippets where they belong in JSFiddle
+
+
+function hideOverlay(event) {
+    if (event.which == 32) {
+    	event.preventDefault()
+        $("#overlay").css("display", "none")
+        startTrial()
+    }
+}
+
+
+#overlay {
+    /* Placement and layout properties */
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Display settings */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Styling */
+    font: 30px sans-serif;
+    background-color: white;
+}
+
+
+<div id="overlay">
+    Press space to begin.
+</div>
+
+
+$(window).on("load", function (event) {
+    $(document).on("keypress", hideOverlay);
+})

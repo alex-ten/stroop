@@ -1,0 +1,35 @@
+unknown {
+    grid-area: unknown;
+    display: grid;
+    grid-template-columns: auto 40px 40px 40px auto;
+    grid-template-rows: 40px 40px;
+    grid-template-areas:
+        ".     .     up    .     ."
+        ".     left  down  right .";
+}
+
+unknown { grid-area: up; }
+unknown { grid-area: left; }
+unknown { grid-area: down; }
+unknown { grid-area: right; }
+
+unknown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font: 22px sans-serif;
+    background-color: lightgray;
+    border: 2px solid white;
+}
+
+unknown {
+    grid-area: unknown;
+    padding: 10px;
+    text-align: center;
+}
+
+unknown > table {
+    width: 100%;
+}

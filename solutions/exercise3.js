@@ -1,7 +1,6 @@
-// Define global variables that functions will have access to
 const FIXDUR = 10
 const COLORS = ['red', 'blue', 'green', 'yellow']
-const STRINGS= [
+const STRINGS = [
 	"RED", "BLUE", "GREEN", "YELLOW", 
     "XXX", "XXXX", "XXXXX", "XXXXXX"
 ]
@@ -13,20 +12,16 @@ const RESPS = {
 }
 let TRIAL = 0
 
-// Function to draw random element from array
 function rand(a) {
 	return a[Math.floor(Math.random() * a.length)]
 }
 
-// startTrial displays fixation cross for FIXDUR amount of time; then shows stimulus
 function startTrial() {
 	$("#stimulus").text("+")
     $("#stimulus").css("color", "black")
     setTimeout(showStimulus, FIXDUR)
 }
 
-// showStimulus randomly generates a Stroop stimulus and assignes a keydown event listener
-// to the document which records a response when fired
 function showStimulus() {
 	const string = rand(STRINGS)
     const color = rand(COLORS)
@@ -40,8 +35,6 @@ function showStimulus() {
     $(document).one("keydown", params, recordResponse);
 }
 
-// recordResponse checks the down-pressed key and records a Stroop response if it's legal
-// response features are added to the results table
 function recordResponse(event) {
 	event.preventDefault()
 	const rt = Date.now() - event.data.startTime
@@ -58,7 +51,6 @@ function recordResponse(event) {
     }
 }
 
-// hideOverlay hides the overlay element (with instructions) and starts trial
 function hideOverlay(event) {
     if (event.which == 32) {
     	event.preventDefault()
@@ -67,9 +59,7 @@ function hideOverlay(event) {
     }
 }
 
-
-// When window loads, start listening to the keypress event on document
-// If event fires, run hideOverlay function
+// ADD EVENT LISTENERS
 $(window).on("load", function (event) {
     $(document).on("keypress", hideOverlay);
 })
