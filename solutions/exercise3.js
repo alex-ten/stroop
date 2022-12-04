@@ -1,3 +1,5 @@
+// ! Make sure you have added the overlay element to your HTML document.
+
 const FIXDUR = 10
 const COLORS = ['red', 'blue', 'green', 'yellow']
 const STRINGS = [
