@@ -1,6 +1,4 @@
-// ! Make sure you have added the overlay element to your HTML document.
-
-const FIXDUR = 10
+const FIXDUR = 1000
 const COLORS = ['red', 'blue', 'green', 'yellow']
 const STRINGS = [
 	"RED", "BLUE", "GREEN", "YELLOW", 
@@ -59,9 +57,10 @@ function hideOverlay(event) {
         $("#overlay").css("display", "none")
         startTrial()
     }
+} 
+
+function assignKeypress() {
+	$(document).on("keypress", hideOverlay)
 }
 
-// ADD EVENT LISTENERS
-$(window).on("load", function (event) {
-    $(document).on("keypress", hideOverlay);
-})
+$(window).on("load", assignKeypress)
