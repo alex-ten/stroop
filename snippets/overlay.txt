@@ -1,5 +1,7 @@
 Add the following code snippets where they belong in JSFiddle
 
+SNIPPET 1
+==============================================
 
 function hideOverlay(event) {
     if (event.which == 32) {
@@ -9,6 +11,11 @@ function hideOverlay(event) {
     }
 }
 
+==============================================
+
+
+SNIPPET 2
+==============================================
 
 #overlay {
     /* Placement and layout properties */
@@ -29,12 +36,26 @@ function hideOverlay(event) {
     background-color: white;
 }
 
+==============================================
+
+
+SNIPPET 3
+==============================================
 
 <div id="overlay">
     Press space to begin.
 </div>
 
+==============================================
 
-$(window).on("load", function (event) {
-    $(document).on("keypress", hideOverlay);
-})
+
+SNIPPET 4
+==============================================
+
+function assignKeypress() {
+	$(document).on("keypress", hideOverlay)
+}
+
+$(window).on("load", assignKeypress)
+
+==============================================

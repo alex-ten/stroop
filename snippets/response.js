@@ -25,7 +25,7 @@ function recordResponse(event) {
     }
 }
 
-// Update your showStimulus function as with new code as follows
+// Update your showStimulus function as follows
 function showStimulus() {
 	const string = rand(STRINGS)
     const color = rand(COLORS)

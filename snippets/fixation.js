@@ -9,7 +9,5 @@ function startTrial() {
     setTimeout(showStimulus, FIXDUR)
 }
 
-// Change what happens on page load to startTrial
-$(window).on("load", function (event) {
-    startTrial()
-})
+// Change what happens on page load -- What should happen?
+$(window).on("load", null)

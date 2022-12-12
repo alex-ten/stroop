@@ -15,7 +15,6 @@ function showStimulus() {
     $("#stimulus").css("color", color)
 }
 
+
 // What happens when page loads
-$(window).on("load", function (event) {
-    showStimulus()
-})
+$(window).on("load", showStimulus)
