@@ -65,11 +65,15 @@ function hideOverlay(event) {
         $("#overlay").css("display", "none")
         startTrial()
     }
+} 
+
+// Assign a function that hide overlay (when spacebar is pressed) to the load event
+function assignKeypress() {
+	$(document).on("keypress", hideOverlay)
 }
+
 
 
 // When window loads, start listening to the keypress event on document
 // If event fires, run hideOverlay function
-$(window).on("load", function (event) {
-    $(document).on("keypress", hideOverlay);
-})
+$(window).on("load", assignKeypress)

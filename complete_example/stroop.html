@@ -1,43 +1,35 @@
 <!doctype html>
 <html>
-
     <head>
         <title>Stroop Task</title>
-        <link rel="stylesheet" type="text/css" href="stroop.css">
-        <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-      </head>
-      
-      <body>
+    </head>
+    <body>
         <div id="container">
-          <div id="stimulus">
-            +
-          </div>
-          <div id="controls">
+            <div id="stimulus">RED</div>
+            <div id="controls">
                 <div class="button" id="G">G</div>
                 <div class="button" id="Y">Y</div>
                 <div class="button" id="R">R</div>
                 <div class="button" id="B">B</div>
-              </div>
-              <div id="results">
+            </div>
+            <div id="results">
                 <b>RESULTS</b>
                 <table>
-                  <thead>
-                    <tr>
-                      <th>Trial</th>
-                      <th>String</th>
-                      <th>Color</th>
-                      <th>Response</th>
-                      <th>RT</th>
-                    </tr>
-                  </thead>
+                    <thead>
+                        <tr>
+                            <th>Trial</th>
+                            <th>String</th>
+                            <th>Color</th>
+                            <th>Response</th>
+                            <th>RT</th>
+                        </tr>
+                     </thead>
                   <tbody></tbody>
-                </table>
-              </div>
+                </table>          
             </div>
-            <div id="overlay">
+        </div>
+        <div id="overlay">
             Press space to begin.
-          </div>
-        </body>
-        <script src="stroop.js"></script>
-        
+        </div>
+    </body>
 </html>
